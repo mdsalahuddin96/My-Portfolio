@@ -3,6 +3,7 @@
 :root {
   --background: #050505;
   --foreground: #ffffff;
+  --text-accent:#3b82f6;
 }
 
 body {
@@ -34,6 +35,41 @@ body {
     inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
+/* .glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+} */
+
+/* Gradient primary background */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+/* Glow shadow */
+.shadow-glow {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+}
+
+/* Text styles */
+.text-primary {
+  color: #8b5cf6;
+}
+
+.text-primary-foreground {
+  color: #ffffff;
+}
+
+.text-muted-foreground {
+  color: #94a3b8;
+}
+
+.text-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Background muted */
+.bg-muted {
+  background-color: rgba(255, 255, 255, 0.06);
+}
 
 .text-gradient {
   background: linear-gradient(to right, #3b82f6, #8b5cf6);

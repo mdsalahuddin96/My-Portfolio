@@ -7,6 +7,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import ParticleBackground from "@/components/ParticleBackground";
 import SocialLinks from "@/components/SocialLinks";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <TechStack />
+      <Skills/>
       <Projects />
       <Education />
       <Contact />
