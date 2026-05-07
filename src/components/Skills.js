@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 
 const skills = [
-  { name: "React / Next.js", level: 90 },
-  { name: "JavaScript (ES6+)", level: 92 },
+  { name: "React / Next.js", level: 80 },
+  { name: "JavaScript (ES6+)", level: 90 },
   { name: "Tailwind CSS", level: 95 },
-  { name: "Node.js / Express", level: 80 },
-  { name: "MongoDB", level: 78 },
+  { name: "Node.js / Express", level: 40 },
+  { name: "MongoDB", level: 40 },
   { name: "HTML / CSS", level: 96 },
-  { name: "Git & GitHub", level: 85 },
-  { name: "Problem Solving", level: 88 },
+  { name: "Git & GitHub", level: 80 },
+  { name: "Problem Solving", level: 80 },
 ];
 
 const Skills = () => (

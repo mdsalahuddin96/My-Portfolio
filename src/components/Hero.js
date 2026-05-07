@@ -79,13 +79,14 @@ const Hero = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4"
           >
-            <button
+            <a
+              href="#projects"
               variants={item}
               className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600   text-white rounded-full font-semibold flex items-center gap-2 transition-all group cursor-pointer"
             >
               View Projects
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             <a
               href="/salauddin.pdf"
               download
@@ -93,9 +94,6 @@ const Hero = () => {
             >
              <Download size={20} /> Download CV
             </a>
-            {/* <button className="px-8 py-4 glass text-white rounded-full font-bold transition-all hover:bg-white/10">
-              Contact Me
-            </button> */}
           </motion.div>
         </div>
 

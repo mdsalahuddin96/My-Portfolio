@@ -89,7 +89,7 @@ const items = [
     icon: GraduationCap,
     title: "B.Sc. in Computer Science & Engineering",
     org: "Dhaka University of Engineering & Technology (DUET)",
-    period: "2019 — 2024",
+    period: "2019 — 2023",
     desc: "Studied algorithms, databases, OS, networks and modern software engineering.",
   },
   {
@@ -101,10 +101,10 @@ const items = [
   },
   {
     icon: BookOpen,
-    title: "Self-taught Full Stack",
+    title: "Programming Hero (Full Stack Development)",
     org: "MERN / Next.js / Tailwind",
     period: "Ongoing",
-    desc: "Daily learning, building portfolio projects, and contributing on GitHub.",
+    desc: "Daily learning, building modern projects, and contributing on GitHub.",
   },
 ];
 
