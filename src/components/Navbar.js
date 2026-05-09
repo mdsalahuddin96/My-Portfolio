@@ -1,20 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiMenu, FiX, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiMenu, FiX,} from "react-icons/fi";
 
 const Navbar = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [scrolled, setScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 50);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -55,6 +44,7 @@ const Navbar = () => {
     { name: "About", href: "about" },
     { name: "Skills", href: "skills" },
     { name: "Projects", href: "projects" },
+    {name:"Education",href:"education"},
     { name: "Contact", href: "contact" },
   ];
 

@@ -213,9 +213,9 @@ const Contact = () => {
             </p>
             <div className="space-y-3 pt-2">
               {[
-                { Icon: Mail, label: "hello@salah.dev" },
-                { Icon: MapPin, label: "Bangladesh" },
-                { Icon: Phone, label: "Available on request" },
+                { Icon: Mail, label: "salauddincse96@gmail.com" },
+                { Icon: MapPin, label: "Dhaka, Bangladesh" },
+                { Icon: Phone, label: "019-9548-6917" },
               ].map(({ Icon, label }) => (
                 <div key={label} className="flex items-center gap-3 text-sm">
                   <span className="w-9 h-9 grid place-items-center rounded-lg bg-muted text-primary">

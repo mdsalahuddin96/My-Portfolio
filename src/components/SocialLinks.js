@@ -33,9 +33,9 @@ import { BiEnvelope } from "react-icons/bi";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 const items = [
-  { icon: FaGithub, href: "https://github.com", color: "hover:text-foreground", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", color: "hover:text-[#0A66C2]", label: "LinkedIn" },
-  { icon: FaFacebook, href: "https://facebook.com", color: "hover:text-[#1877F2]", label: "Facebook" },
+  { icon: FaGithub, href: "https://github.com/mdsalahuddin96", color: "hover:text-foreground", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://linkedin.com/in/md-salah-uddin96", color: "hover:text-[#0A66C2]", label: "LinkedIn" },
+  { icon: FaFacebook, href: "https://facebook.com/mohammed.salauddin.3781", color: "hover:text-[#1877F2]", label: "Facebook" },
   { icon: BiEnvelope, href: "mailto:hello@salah.dev", color: "hover:text-[#FBBC04]", label: "Email" },
 ];
 
