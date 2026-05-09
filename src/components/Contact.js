@@ -137,14 +137,7 @@
 // export default Contact;
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  Send,
-  Mail,
-  MapPin,
-  Phone,
-  Loader2,
-  Check,
-} from "lucide-react";
+import { Send, Mail, MapPin, Phone, Loader2, Check } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
@@ -245,56 +238,53 @@ const Contact = () => {
               ))}
             </div>
           </motion.div>
-
           <motion.form
-            onSubmit={submit}
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-3 glass rounded-3xl p-7 space-y-4"
+            className="md:col-span-3 glass rounded-3xl p-7 space-y-4 border border-[#ffffff14]"
           >
+            {/* Name & Email */}
             <div className="grid sm:grid-cols-2 gap-4">
-              <Field
-                label="Your Name"
+              <input
+                type="text"
                 name="name"
-                value={form.name}
-                onChange={onChange}
+                placeholder="Your Name"
+                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 
+                 focus:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/10
+                 transition"
               />
-              <Field
-                label="Email"
+
+              <input
                 type="email"
                 name="email"
-                value={form.email}
-                onChange={onChange}
+                placeholder="Email"
+                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 
+                 focus:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/10
+                 transition"
               />
             </div>
-            <Field
-              label="Message"
-              textarea
+
+            {/* Message */}
+            <textarea
               name="message"
-              value={form.message}
-              onChange={onChange}
+              rows="5"
+              placeholder="Your Message"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 
+               focus:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/10
+               transition resize-none"
             />
+
+            {/* Button */}
             <motion.button
-              type="submit"
-              disabled={loading}
+              type="button"
               whileTap={{ scale: 0.97 }}
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium inline-flex items-center justify-center gap-2 shadow-glow hover:shadow-glow-strong transition-shadow disabled:opacity-70"
+              className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-primary 
+               text-primary-foreground font-medium inline-flex items-center justify-center 
+               gap-2 shadow-glow hover:shadow-glow-strong transition-shadow"
             >
-              {loading ? (
-                <>
-                  <Loader2 size={16} className="animate-spin" /> Sending...
-                </>
-              ) : done ? (
-                <>
-                  <Check size={16} /> Sent!
-                </>
-              ) : (
-                <>
-                  <Send size={16} /> Send Message
-                </>
-              )}
+              <Send size={16} /> Send Message
             </motion.button>
           </motion.form>
         </div>

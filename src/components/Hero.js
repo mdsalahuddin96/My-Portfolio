@@ -67,7 +67,7 @@ const Hero = () => {
               />
             </div>
           </motion.div>
-          <motion.p className="text-gray-400 max-w-xl text-sm leading-relaxed ">
+          <motion.p className="text-gray-400 max-w-xl text-sm leading-relaxed">
             Full Stack Web Developer crafting fast, accessible, and beautifully
             animated experiences with React, Next.js & Node. Currently open to
             remote, on‑site, and freelance work worldwide.
@@ -79,20 +79,21 @@ const Hero = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4"
           >
-            <a
-              href="#projects"
-              variants={item}
-              className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600   text-white rounded-full font-semibold flex items-center gap-2 transition-all group cursor-pointer"
-            >
-              View Projects
-              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            
             <a
               href="/salauddin.pdf"
               download
-              className="flex items-center gap-2 px-6 py-2 rounded-lg glass text-white font-semibold transition-all "
+              className="flex items-center gap-2 px-6 py-2 rounded-lg text-white font-semibold  bg-gradient-primary"
             >
-             <Download size={20} /> Download CV
+             Download CV<Download size={20} /> 
+            </a>
+            <a
+              href="#projects"
+              variants={item}
+              className="flex items-center gap-2 cursor-pointer btn-outline-gradient"
+            >
+              View Projects
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
         </div>

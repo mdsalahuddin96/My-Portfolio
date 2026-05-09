@@ -4,22 +4,58 @@ import { motion } from "framer-motion";
 import { FiMenu, FiX, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const Navbar = () => {
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 50);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
+      // Navbar background
       setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
+      // Active section detection
+      const sections = document.querySelectorAll("section");
+
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        // Adjust 150 based on navbar height
+        if (window.scrollY >= sectionTop - 150) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Run once initially
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "about" },
+    { name: "Skills", href: "skills" },
+    { name: "Projects", href: "projects" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -44,11 +80,13 @@ const Navbar = () => {
           {navLinks.map((link, i) => (
             <motion.a
               key={link.name}
-              href={link.href}
+              href={`#${link.href}`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="text-gray-300 hover:text-white transition-colors"
+              className={`text-gray-300 hover:text-white transition-colors  ${
+                activeSection === link.href ? "active-nav" : "nav-link"
+              }`}
             >
               {link.name}
             </motion.a>
@@ -58,7 +96,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-medium"
+            className="px-6 py-2 bg-gradient-primary shadow-glow rounded-full font-medium "
           >
             <a href="#contact">Hire Me</a>
           </motion.button>
@@ -82,9 +120,12 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
+              href={`#${link.href}`}
               onClick={() => setIsOpen(false)}
-              className="text-lg text-gray-300 hover:text-white"
+              // className="text-lg text-gray-300 hover:text-white cursor-pointer"
+              className={`${
+                activeSection === link.href ? "px-5 py-2 text-blue-500 border rounded-full font-bold" : "nav-link"
+              }`}
             >
               {link.name}
             </a>

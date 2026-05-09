@@ -30,7 +30,7 @@ const Skills = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.06 }}
             whileHover={{ scale: 1.02 }}
-            className="group glass rounded-2xl p-5 hover:shadow-glow transition-shadow"
+            className="rounded-2xl p-5 gradient-card"
           >
             <div className="flex justify-between items-baseline mb-3">
               <span className="font-medium">{s.name}</span>
