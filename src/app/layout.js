@@ -5,7 +5,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Md. Salah uddin | Full Stack Developer Portfolio",
-  description: "Modern portfolio of Md. Salah uddin, a Full Stack Web Developer specialized in Next.js, React, and interactive UI.",
+  description:
+    "Modern portfolio of Md. Salah uddin, a Full Stack Web Developer specialized in Next.js, React, and interactive UI.",
 };
 
 export default function RootLayout({ children }) {

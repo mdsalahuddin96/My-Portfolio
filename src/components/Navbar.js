@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiMenu, FiX,} from "react-icons/fi";
-
+import logo from "@/assets/logo1.jpg"
+import Image from "next/image";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -60,9 +61,9 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-bold text-gradient"
+          className="text-2xl font-bold "
         >
-          SALAH.dev
+        <span className="text-gradient">SALAH</span><span className="text-white">.dev</span>
         </motion.div>
 
         {/* Desktop Menu */}
