@@ -46,10 +46,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-400  h-12"
+            className="text-xl md:text-2xl text-white  h-12"
           >
             <div className="flex gap-2 items-center">
-              <span>I&apos;m a </span>
+              <span className="text-gray-400">I&apos;m a </span>
               <Typewriter
                 options={{
                   strings: [

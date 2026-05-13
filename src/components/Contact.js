@@ -92,6 +92,7 @@ const Contact = () => {
             {/* Name & Email */}
             <div className="grid sm:grid-cols-2 gap-4">
               <input
+                required
                 type="text"
                 name="name"
                 placeholder="Your Name"
@@ -101,6 +102,7 @@ const Contact = () => {
               />
 
               <input
+                required
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -112,6 +114,7 @@ const Contact = () => {
 
             {/* Message */}
             <textarea
+              required
               name="message"
               rows="5"
               placeholder="Your Message"
@@ -129,7 +132,7 @@ const Contact = () => {
                text-primary-foreground font-medium inline-flex items-center justify-center 
                gap-2 shadow-glow hover:shadow-glow-strong transition-shadow"
             >
-              <Send size={16} /> {isPending?"Sending...":"Send Message"}
+              <Send size={16} /> {isPending ? "Sending..." : "Send Message"}
             </motion.button>
           </motion.form>
         </div>
