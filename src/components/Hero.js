@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import { Download, Sparkles } from "lucide-react";
-
+import profileImage from "@/assets/profileImage.png"
 
 const item = {
   hidden: { opacity: 0, y: 30 },
@@ -119,7 +119,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl rotate-6 blur-2xl opacity-50" />
             <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/10 glass animate-glow">
               <Image
-                src="/assets/profile.png"
+                src={profileImage}
                 alt="Md. Salah uddin"
                 fill
                 className="object-cover"
