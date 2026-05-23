@@ -1,9 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiMenu, FiX,} from "react-icons/fi";
-import logo from "@/assets/logo1.jpg"
-import Image from "next/image";
+import { FiMenu, FiX } from "react-icons/fi";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +44,7 @@ const Navbar = () => {
     { name: "About", href: "about" },
     { name: "Skills", href: "skills" },
     { name: "Projects", href: "projects" },
-    {name:"Education",href:"education"},
+    { name: "Education", href: "education" },
     { name: "Contact", href: "contact" },
   ];
 
@@ -58,13 +57,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <motion.div
+        <motion.a
+          href="#top"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-bold "
         >
-        <span className="text-gradient">SALAH</span><span className="text-white">.dev</span>
-        </motion.div>
+          <span className="text-gradient">SALAH</span>
+          <span className="text-white">.dev</span>
+        </motion.a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
@@ -115,7 +116,9 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               // className="text-lg text-gray-300 hover:text-white cursor-pointer"
               className={`${
-                activeSection === link.href ? "px-5 py-2 text-blue-500 border rounded-full font-bold" : "nav-link"
+                activeSection === link.href
+                  ? "px-5 py-2 text-blue-500 border rounded-full font-bold"
+                  : "nav-link"
               }`}
             >
               {link.name}

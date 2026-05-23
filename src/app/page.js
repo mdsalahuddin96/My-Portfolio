@@ -9,12 +9,16 @@ import ParticleBackground from "@/components/ParticleBackground";
 import SocialLinks from "@/components/SocialLinks";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
+import Top from "@/components/Top";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen container mx-auto">
+      
       <ParticleBackground />
+      <Top/>
       <Navbar />
+      
       <Hero />
       <About />
       <TechStack />
