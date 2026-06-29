@@ -4,7 +4,45 @@ import p3 from "@/assets/project3.png";
 import p4 from "@/assets/project4.png";
 import p5 from "@/assets/project5.png";
 import p6 from "@/assets/project6.png";
+import p7 from "@/assets/project7.png";
 export const projects = [
+  {
+    id: 7,
+    title: "TaskForge Pro",
+    category: "Full Stack",
+    img: p7,
+    tags: [
+      "React",
+      "Next.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind",
+      "BetterAuth",
+      "JWT",
+      "Stripe Payment",
+    ],
+    desc: `A modern Freelance Marketplace Platform where Clients can post tasks,
+     Freelancers can submit proposals, and Admins can manage the entire 
+     platform with secure role-based access.`,
+    live: "https://task-forge-pro-client.vercel.app/",
+    code: "https://github.com/mdsalahuddin96/TaskForge-Pro-client",
+    challenges: [
+      "Implementing Role Based Access Control",
+      "Stripe Payment Integration",
+    ],
+
+    future: [
+      "Real-time Chat",
+      "Notifications",
+      "Email Verification",
+      "Password Reset",
+      "Milestone Payments",
+      "Review & Rating System",
+      "Freelancer Portfolio",
+      "Saved Tasks",
+      "Admin Activity Logs",
+    ],
+  },
   {
     id: 6,
     title: "PawNest",
