@@ -5,7 +5,34 @@ import p4 from "@/assets/project4.png";
 import p5 from "@/assets/project5.png";
 import p6 from "@/assets/project6.png";
 import p7 from "@/assets/project7.png";
+import p8 from "@/assets/project8.png"
 export const projects = [
+{
+    id: 8,
+    title: "Mini Kanban Board",
+    category: "Full Stack",
+    img: p8,
+    tags: [
+      "Next.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "TypeScript",
+      "JWT",
+    ],
+    desc: "A modern, full-stack Kanban board application built with Next.js, Express, Prisma, and PostgreSQL. Features real-time board collaboration, fractional indexing for smooth drag-and-drop task reordering, and JWT authentication with role-based access control (RBAC).Fully containerized using Docker Compose and deployed on Vercel and Render.",
+    live: "https://mini-kanban-board-omega.vercel.app",
+    code: "https://github.com/mdsalahuddin96/mini-kanban-board.git",
+    challenges: [
+      "Drag-and-Drop Reordering Overhead",
+      "Database Connection & Multi-Environment Builds",
+    ],
+
+    future: [
+      "Real-Time Collaboration via WebSockets",
+      "Optimistic UI Updates",
+    ],
+  },
   {
     id: 7,
     title: "TaskForge Pro",
